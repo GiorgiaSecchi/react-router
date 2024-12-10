@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
+import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import DefaultLayout from "./layouts/DefaultLayout";
+import PostsPage from "./pages/PostsPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route Component={DefaultLayout}>
           <Route path="/" Component={HomePage} />
           <Route path="/about" Component={AboutPage} />
+          <Route path="/posts" Component={PostsPage} />
         </Route>
       </Routes>
     </BrowserRouter>

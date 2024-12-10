@@ -13,7 +13,7 @@ export default function DefaultLayout() {
       </main>
 
       <footer className="text-bg-dark bg-gradient py-4">
-        <div className="container">Footer</div>
+        <div className="container-fluid">Footer</div>
       </footer>
     </div>
   );
