@@ -1,12 +1,20 @@
+import { useEffect } from "react";
+
 export default function IndexPosts() {
   const apiUrl = import.meta.env.VITE_APP_URL;
   console.log("apiUrl:" + apiUrl);
 
-  fetch(apiUrl + "/posts")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    });
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  const fetchPosts = () => {
+    fetch(apiUrl + "/posts")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
   return (
     <div className="container py-5">
