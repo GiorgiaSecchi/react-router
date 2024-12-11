@@ -54,10 +54,19 @@ export default function IndexPosts() {
               {posts.map((post) => (
                 <tr key={post.id}>
                   <td>
-                    <img src={apiUrl + post.immagine} alt="IMG" width="70" />
+                    <img src={apiUrl + post.immagine} alt="IMG" width="100" />
                   </td>
                   <td>{post.titolo}</td>
-                  <td>{post.tags}</td>
+                  <td>
+                    {post.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="badge text-bg-secondary me-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </td>
                   <td>
                     <a href="#">Mostra</a>
                   </td>
