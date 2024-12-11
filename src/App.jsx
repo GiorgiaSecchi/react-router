@@ -9,7 +9,9 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+// pages posts
 import IndexPosts from "./pages/posts/indexPosts";
+import ShowPosts from "./pages/posts/ShowPosts";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route Component={AlternativeLayout}>
           {/* Risorse Posts */}
           <Route path="/posts" Component={IndexPosts} />
+          <Route path="/posts/:id" Component={ShowPosts} />
         </Route>
       </Routes>
     </BrowserRouter>

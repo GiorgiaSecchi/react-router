@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function IndexPosts() {
   const [posts, setPosts] = useState([]);
@@ -41,9 +42,9 @@ export default function IndexPosts() {
 
       {posts.length > 0 ? (
         <div className="py-4">
-          <table className="table table-hover table-striped">
+          <table className="table table-hover">
             <thead>
-              <tr>
+              <tr className="table-light">
                 <th scope="col">Immagine</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Tags</th>
@@ -67,8 +68,16 @@ export default function IndexPosts() {
                       </span>
                     ))}
                   </td>
+
                   <td>
-                    <a href="#">Mostra</a>
+                    {/* show post button */}
+                    <Link
+                      to={`/posts/${post.id}`}
+                      type="button"
+                      className="btn btn-primary btn-sm"
+                    >
+                      Mostra
+                    </Link>
                   </td>
                 </tr>
               ))}
