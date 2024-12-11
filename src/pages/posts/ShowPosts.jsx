@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Cards from "../../components/Cards";
+import PostCard from "../../components/Cards";
 
 export default function ShowPosts() {
   const apiUrl = import.meta.env.VITE_APP_URL;
@@ -28,12 +28,13 @@ export default function ShowPosts() {
   };
 
   return (
-    <div className="container py-5">
-      <h1>Dettaglio Post</h1>
-
+    <div className="container py-5 d-flex justify-content-center">
       <div className="py-5">
+        <div className="text-center mb-5">
+          <h1>Dettaglio Post</h1>
+        </div>
         {post ? (
-          <Cards
+          <PostCard
             titolo={post.titolo}
             immagine={post.immagine}
             descrizione={post.contenuto}

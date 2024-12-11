@@ -1,27 +1,29 @@
 const apiUrl = import.meta.env.VITE_APP_URL;
 
-export default function Cards({ titolo, immagine, tags, descrizione }) {
+export default function PostCard({ titolo, immagine, tags, descrizione }) {
   return (
-    <div class="card mb-3">
-      <img src={apiUrl + immagine} class="card-img-top" alt={titolo} />
-      <div class="card-body">
-        <h5 class="card-title">{titolo}</h5>
-        <p class="card-text">{descrizione}</p>
-        <p class="card-text">
-          <small class="text-body-secondary">{tags}</small>
+    <div className="card mb-3 shadow">
+      <img src={apiUrl + immagine} className="card-img-top" alt={titolo} />
+      <div className="card-body">
+        <h5 className="card-title mb-3">{titolo}</h5>
+        <p className="card-text mb-3">{descrizione}</p>
+        <p className="card-text">
+          <small className="text-body-secondary">{tags}</small>
         </p>
       </div>
     </div>
   );
 }
 
+//# ALTRE VERSIONI DELLA CARD
+
 {
-  /* <div classNameName="card mb-3">
-      <img src={apiUrl + immagine} classNameName="card-img-top " alt={titolo} />
-      <div classNameName="card-body">
-        <h5 classNameName="card-title">{titolo}</h5>
-        <p classNameName="card-text">{descrizione}</p>
-        <p classNameName="card-text">{tags.join(", ")}</p>
+  /* <div className="card mb-3">
+      <img src={apiUrl + immagine} className="card-img-top " alt={titolo} />
+      <div className="card-body">
+        <h5 className="card-title">{titolo}</h5>
+        <p className="card-text">{descrizione}</p>
+        <p className="card-text">{tags.join(", ")}</p>
       </div>
     </div> */
 }
