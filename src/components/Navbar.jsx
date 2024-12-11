@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" to="#">
-          React Blog Pages
+          {import.meta.env.VITE_APP_NAME || "React APP "}
         </a>
         <button
           className="navbar-toggler"
