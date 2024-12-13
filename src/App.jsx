@@ -11,7 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 // pages posts
 import IndexPosts from "./pages/posts/indexPosts";
-import ShowPosts from "./pages/posts/ShowPosts";
+import ShowPosts from "./pages/posts/showPosts";
 
 function App() {
   return (
